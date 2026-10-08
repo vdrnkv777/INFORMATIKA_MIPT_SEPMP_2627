@@ -1,0 +1,13 @@
+file_in = open('input.txt', 'r')
+text = file_in.read()
+file_in.close()
+text = text.replace('...', '.')
+text = text.replace('?!', '?')
+text = text.replace('!?', '?')
+count_dot = text.count('.')   
+count_voskl = text.count('!')     
+count_vopros = text.count('?')     
+total = count_dot + count_voskl + count_vopros
+file_out = open('output.txt', 'w')
+file_out.write(str(total)) 
+file_out.close()
